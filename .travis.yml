@@ -18,8 +18,6 @@ matrix:
         - SAUCE_USERNAME=elia
         # SAUCE_ACCESS_KEY:
         - secure: GT13SjzU8vmqKIyY2LAXje+ndqevTsX/w71JkZHRLTrDUl0qcIod7xsfahbzGt2gOZPYZUkKiVaPoUenhc/YeJ2jTJVHeHY9UEl2II+3tOtuvp2jLadA//aBbsB6/09d7lIZMzpa93TL2R/SncPxugYW9v2o8o8Lwd2iIzowT/g=
-      before_install:
-        - eval travis_start_sauce_connect
 
     - rvm: 2.4.0
       env: RUN=jshint
@@ -78,6 +76,7 @@ before_install:
   - npm install -g uglify-js
   - type bundle || gem install bundler
   - bundle config without doc
+  - test $SAUCE_USERNAME = "" || eval travis_start_sauce_connect
 
 script:
   - "bundle exec rake $RUN"
