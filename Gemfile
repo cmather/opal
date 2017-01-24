@@ -33,6 +33,6 @@ group :development do
   end
 end unless ENV['CI']
 
-group :doc
+group :doc do
   gem 'redcarpet'
 end

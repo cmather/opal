@@ -76,7 +76,7 @@ before_install:
   - npm install -g uglify-js
   - type bundle || gem install bundler
   - bundle config without doc
-  - test $SAUCE_USERNAME = "" || eval travis_start_sauce_connect
+  - test "$SAUCE_USERNAME" = "" || eval travis_start_sauce_connect
 
 script:
   - "bundle exec rake $RUN"
