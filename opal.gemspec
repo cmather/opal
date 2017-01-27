@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 2.0.0'
 
   s.add_dependency 'sourcemap', '~> 0.1.0'
-  s.add_dependency 'hike', '~> 1.2'
+  s.add_dependency 'hike', '~> 2.1.3'
   s.add_dependency 'ast', '>= 2.3.0'
   s.add_dependency 'parser', '= 2.3.3.1'
 
